@@ -1,0 +1,75 @@
+/* Basic Reset */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    top: -100px; /* Overlaps with the landing page slightly */
+}
+
+.timeline {
+    width: 25%;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 100px; /* Height of header */
+}
+
+#map {
+    width: 75%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    right: 0;
+    top: 100px; /* Height of header */
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .timeline, #map {
+        width: 100%;
+        position: relative;
+        height: 50vh;
+    }
+}
